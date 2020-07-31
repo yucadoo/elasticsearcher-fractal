@@ -124,10 +124,10 @@ class UserElasticsearchTransformer extends TransformerAbstract
 }
 ```
 
-It's time now to put things together. To do so we need a PSR-11 compatible container, which exist in most modern PHP frameworks. Most containers return an instance of the class when given the full class name.
+It's time now to put things together. To do so we need a PSR-11 compatible container, which exists in most modern PHP frameworks. Most containers return an instance of the class when given the full class name.
 
 The document manager needs the container to obtain the transformer instance to be used for the handled input. When handling a User a UserElasticsearchTransformer instance is needed, when handling a Post model the PostElasticsearchTransformer instance is needed, and so on.
-The document manager doesn't know the class name of the transformer. The container is expect to resolve it based on the index name. To do so the [AliasContainer](https://github.com/thecodingmachine/alias-container) can be used (version 2.0 or later).
+The document manager doesn't know the class name of the transformer. The container is expect to resolve the transformer based on the index name. To do so the [AliasContainer](https://github.com/thecodingmachine/alias-container) can be used (version 2.0 or later).
 
 I also recommend using the [SingletonContainer](https://github.com/yucadoo/singleton-container) to cache the resolved transformers.
 
@@ -149,7 +149,7 @@ use ElasticSearcher\Environment;
 use ElasticSearcher\ElasticSearcher;
 use ElasticSearcher\Managers\DocumentsManager as WrappedDocumentManager;
 use League\Fractal\Manager as FractalManager;
-use Mouf\AliasContainer;
+use Mouf\AliasContainer\AliasContainer;
 use Psr\Container\ContainerInterface;
 use YucaDoo\ElasticSearcher\Managers\DocumentManager;
 use YucaDoo\SingletonContainer\SingletonContainer;
