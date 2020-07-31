@@ -9,6 +9,9 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ## [1.0.0] - 2020-08-01
 
 ### Added
+- `YucaDoo\ElasticSearcher\Managers\DocumentManager` class.
+- `YucaDoo\ElasticSearcher\Managers\DocumentAdapter` interface.
+- Unit tests for `YucaDoo\ElasticSearcher\Managers\DocumentManager`.
 - Travis configuration
 - Scrutinizer configuration
 - Github community files
