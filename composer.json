@@ -48,6 +48,10 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
+        },
+        "thanks": {
+            "name": "madewithlove/elasticsearcher",
+            "url": "https://github.com/madewithlove/elasticsearcher"
         }
     },
     "config": {
